@@ -1,0 +1,70 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1/06/2015, 09:46:46 AM
+    Author     : infinitum
+*/
+
+header, footer, aside, nav, article {
+display: block;
+}
+
+html,body{
+margin:2px;
+height:100%;
+}
+
+header{
+ background-color: rgba(215, 44, 84, 0.4);
+ color: rgba(215, 44, 84, 0.4);
+ height: 150px;
+ width:100%;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+nav{
+ background-color: #FBB6B6;
+ height: auto;
+ width:auto;
+}
+
+#content {
+ display: table;
+}
+
+#mainContent {
+ display: table-cell;
+}
+
+aside{
+ display: table-cell;   
+ background-color: #FFCFBB;
+ width: 20%;
+ float:left; // Flotar a la izquierda   
+}
+
+section{
+ background-color: #00CFBB;
+ width: 80%;
+ float:left; // Flotar a la izquierda
+}
+
+article{
+ height: auto;
+ width: 50%;  
+ float:left;
+ padding:3px;
+    
+}
+
+footer{
+ background-color: #00AA66; 
+ height: 50px; 
+ width: 100%; 
+ float:left; // Flotar a la izquierda
+ clear:both; //Comenzar en nueva linea 
+}
