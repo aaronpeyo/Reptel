@@ -22,7 +22,10 @@
         $objeto->setFecha($fecha);
         $objeto->setStatus($status);
         $objeto->guardar();
-        header('Location: index.php');
+        echo "<script>
+                alert('Comentario enviado correctamente');
+                window.location= 'index.php'
+    </script>";
     }else{
 
   ?>
@@ -171,7 +174,7 @@ include'../template/menu.php';
       <div class="form-group">
         <label class="control-label col-sm-2">Email</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" placeholder="Ingresa el email" name="email" required value="<?php echo $objeto->getEmail() ?>">
+          <input type="email" class="form-control" placeholder="Ingresa el email" name="email" required value="<?php echo $objeto->getEmail() ?>">
         </div>
       </div>
       <!--Sección de campo 1-->
@@ -185,13 +188,13 @@ include'../template/menu.php';
       <div class="form-group">
         <label class="control-label col-sm-2">Fecha</label>
         <div class="col-sm-10">          
-          <input type="text" class="form-control" placeholder="ingresa la fecha" name="fecha" required value="<?php echo $objeto->getFecha() ?>">
+          <input type="date" class="form-control" placeholder="ingresa la fecha" name="fecha" required value="<?php echo $objeto->getFecha() ?>">
         </div>
       </div>
          <div class="form-group">
         <label class="control-label col-sm-2">Estatus</label>
         <div class="col-sm-10">          
-          <input type="text" class="form-control" placeholder="ingresa el estatus" name="status" required value="<?php echo $objeto->getStatus() ?>">
+          <input type="number" class="form-control" placeholder="ingresa el estatus" name="status" required value="<?php echo $objeto->getStatus() ?>">
         </div>
       </div>
       <!--Sección de campo 3-->

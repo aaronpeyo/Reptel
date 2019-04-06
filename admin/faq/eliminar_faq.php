@@ -5,7 +5,10 @@ $idFaq = (isset($_REQUEST['idFaq'])) ? $_REQUEST['idFaq'] : null;
 if($idFaq){
     $faq = Faq::buscarPorId($idFaq);
     $faq->eliminar();
-  header('Location: index.php');
+  echo "<script>
+                alert('Pregunta eliminada correctamente');
+                window.location= 'index.php'
+    </script>";
 
 }
 ?>

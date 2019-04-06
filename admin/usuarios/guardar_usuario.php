@@ -22,7 +22,10 @@
         $objeto->setEstatus($estatus);
         $objeto->setPrivilegios($privilegios);
         $objeto->guardar();
-       header('Location: index.php');
+       echo "<script>
+                alert('Usuario agregado correctamente');
+                window.location= 'index.php'
+    </script>";
        die();
     }else{
 
@@ -173,27 +176,27 @@ include'../template/menu.php';
       <div class="form-group">
         <label class="control-label col-sm-2">Email</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" placeholder="Ingresa el email" name="email" required value="<?php echo $objeto->getEmail() ?>">
+          <input type="email" class="form-control" placeholder="Ingresa el email" name="email" required value="<?php echo $objeto->getEmail() ?>">
         </div>
       </div>
       <!--Sección de campo 1-->
       <div class="form-group">
         <label class="control-label col-sm-2">Password</label>
         <div class="col-sm-10">          
-          <input type="text" class="form-control" placeholder="ingresa el pass" name="password" required value="<?php echo $objeto->getPassword() ?>">
+          <input type="password" class="form-control" placeholder="ingresa el pass" name="password" required value="<?php echo $objeto->getPassword() ?>">
         </div>
       </div>
       <!--Sección de campo 2-->
       <div class="form-group">
         <label class="control-label col-sm-2">Estatus</label>
         <div class="col-sm-10">          
-          <input type="text" class="form-control" placeholder="ingresa el estatus" name="estatus" required value="<?php echo $objeto->getEstatus() ?>">
+          <input type="number" class="form-control" placeholder="ingresa el estatus" name="estatus" required value="<?php echo $objeto->getEstatus() ?>">
         </div>
       </div>
          <div class="form-group">
         <label class="control-label col-sm-2">Privilegios</label>
         <div class="col-sm-10">          
-          <input type="text" class="form-control" placeholder="ingresa el privilegio" name="privilegios" required value="<?php echo $objeto->getPrivilegios() ?>">
+          <input type="number" class="form-control" placeholder="ingresa el privilegio" name="privilegios" required value="<?php echo $objeto->getPrivilegios() ?>">
         </div>
       </div>
       <!--Sección de campo 3-->

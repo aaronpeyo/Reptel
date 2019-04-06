@@ -5,7 +5,10 @@ $idCategoria = (isset($_REQUEST['idCategoria'])) ? $_REQUEST['idCategoria'] : nu
 if($idCategoria){
     $categoria = Categoria::buscarPorId($idCategoria);
     $categoria->eliminar();
-  header('Location: index.php');
+  echo "<script>
+                alert('Categoria eliminada correctamente');
+                window.location= 'index.php'
+    </script>";
 
 }
 ?>

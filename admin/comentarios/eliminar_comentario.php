@@ -5,7 +5,10 @@ $idComentario = (isset($_REQUEST['idComentario'])) ? $_REQUEST['idComentario'] :
 if($idComentario){
     $comentario = Comentario::buscarPorId($idComentario);
     $comentario->eliminar();
-  header('Location: index.php');
+  echo "<script>
+                alert('Comentario eliminado correctamente');
+                window.location= 'index.php'
+    </script>";
 
 }
 ?>

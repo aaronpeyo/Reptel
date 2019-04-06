@@ -20,7 +20,10 @@
         $objeto->setRespuesta($respuesta);
         $objeto->setFecha($fecha);
         $objeto->guardar();
-        header('Location: index.php');
+        echo "<script>
+                alert('Pregunta agregada correctamente');
+                window.location= 'index.php'
+    </script>";
     }else{
 
   ?>

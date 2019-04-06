@@ -67,7 +67,7 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
 
-    <p class="login-box-msg">Iniciar secion</p>
+    <p class="login-box-msg">Iniciar sesión</p>
 
     <form action="lib/validar_login.php" method="post">
 

@@ -19,7 +19,10 @@
         $objeto->setNombreCategoria($nombreCategoria);
         $objeto->setDescripcion($descripcion);
         $objeto->guardar();
-        header('Location: index.php');
+        echo "<script>
+                alert('Categoria agregada correctamente');
+                window.location= 'index.php'
+    </script>";
         die();
     }else{
 

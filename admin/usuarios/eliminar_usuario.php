@@ -5,7 +5,11 @@ $idUsuario = (isset($_REQUEST['idUsuario'])) ? $_REQUEST['idUsuario'] : null;
 if($idUsuario){
     $usuario = Usuario::buscarPorId($idUsuario);
     $usuario->eliminar();
-  header('Location: index.php');
+ 
+     echo "<script>
+                alert('Usuario eliminado correctamente');
+                window.location= 'index.php'
+    </script>";
 
 }
 ?>

@@ -40,7 +40,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $objeto->setStock($stock);
         $objeto->setDescripcion($descripcion);
         $objeto->guardar();
-        header('Location: index.php');
+       echo "<script>
+                alert('Producto agregado correctamente');
+                window.location= 'index.php'
+    </script>";
     }else if($_Files["imagen"]==null){
       
 
@@ -223,7 +226,7 @@ include'../template/menu.php';
         }    
 
 ?>
-          <input type="file" class="form-control" name="imagen">
+          <input type="file" class="form-control" name="imagen" required>
         </div>
       </div>
       <!--Sección de campo 1-->
@@ -256,14 +259,14 @@ include'../template/menu.php';
          <div class="form-group">
         <label class="control-label col-sm-2">Precio</label>
         <div class="col-sm-10">          
-          <input type="text" class="form-control" placeholder="ingresa el precio" name="precio" required value="<?php echo $objeto->getPrecio() ?>">
+          <input type="number" class="form-control" placeholder="ingresa el precio" name="precio" required value="<?php echo $objeto->getPrecio() ?>">
         </div>
       </div>
 
       <div class="form-group">
         <label class="control-label col-sm-2">Existencia</label>
         <div class="col-sm-10">          
-          <input type="text" class="form-control" placeholder="ingresa la cantidad de productos existentes" name="stock" required value="<?php echo $objeto->getStock() ?>">
+          <input type="number" class="form-control" placeholder="ingresa la cantidad de productos existentes" name="stock" required value="<?php echo $objeto->getStock() ?>">
         </div>
       </div>
 

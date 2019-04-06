@@ -5,7 +5,10 @@ $idContacto = (isset($_REQUEST['idContacto'])) ? $_REQUEST['idContacto'] : null;
 if($idContacto){
     $contacto = Contacto::buscarPorId($idContacto);
     $contacto->eliminar();
-  header('Location: index.php');
+  echo "<script>
+                alert('Contacto eliminado correctamente');
+                window.location= 'index.php'
+    </script>";
 
 }
 ?>
